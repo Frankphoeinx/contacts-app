@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+@import "reset.scss";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+a {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #d9d9d9;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: white;
+}
