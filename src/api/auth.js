@@ -1,10 +1,10 @@
 import { supabase } from "@/services/supabase.js"
 
-export const isAuthorized = async () => {
+export const getSessionApi = async () => {
   const {
     data: { session }
   } = await supabase.auth.getSession()
-  return !!session || "/login"
+  return session
 }
 
 export const signUpApi = async (email, password) => {

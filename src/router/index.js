@@ -1,4 +1,4 @@
-import { isAuthorized } from "../api/auth.js"
+import { getSessionApi } from "../api/auth.js"
 import { createRouter, createWebHistory } from "vue-router"
 
 import HomeView from "../views/HomeView.vue"
@@ -30,7 +30,11 @@ const router = createRouter({
 
 router.beforeEach(async (to) => {
   if (to.name === "login") return true
-  return await isAuthorized()
+  const session = await getSessionApi()
+  if (!session) {
+    return "/login"
+  }
+  return true
 })
 
 export default router

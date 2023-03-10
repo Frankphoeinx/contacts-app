@@ -18,7 +18,7 @@ onBeforeMount(async () => {
     data: { session },
     error
   } = await supabase.auth.getSession()
-  if (error) return
+  if (!session || error) return
   user.data = session.user
 })
 </script>
