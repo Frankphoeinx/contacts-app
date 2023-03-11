@@ -18,7 +18,7 @@ import { computed } from "@vue/reactivity"
 
 // global state
 const { contacts } = useContactsStore()
-const { user } = useUserStore()
+const { user, getSession } = useUserStore()
 
 // state
 const state = reactive({
@@ -83,7 +83,8 @@ const onScroll = (e) => {
 }
 
 // mounted
-onMounted(() => {
+onMounted(async () => {
+  await getSession()
   fetchContacts()
 })
 

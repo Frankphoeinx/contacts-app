@@ -31,7 +31,7 @@ import { required, email, helpers } from "@vuelidate/validators"
 const route = useRoute()
 
 //global state
-const { user } = useUserStore()
+const { user, getSession } = useUserStore()
 
 // state
 const state = reactive({
@@ -144,7 +144,8 @@ const saveContact = async (e) => {
 }
 
 // mounted
-onBeforeMount(() => {
+onBeforeMount(async () => {
+  await getSession()
   fetchContact()
 })
 </script>
