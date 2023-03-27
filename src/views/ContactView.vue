@@ -1,7 +1,6 @@
 <script setup>
 // vue
-import { reactive } from "@vue/reactivity"
-import { onBeforeMount } from "vue"
+import { reactive, onBeforeMount } from "vue"
 import { RouterLink, useRoute } from "vue-router"
 
 // components

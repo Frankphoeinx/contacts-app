@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, reactive, watch } from "vue"
+import { onMounted, reactive } from "vue"
 import { onBeforeRouteLeave } from "vue-router"
 
 // components

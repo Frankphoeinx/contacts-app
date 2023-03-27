@@ -1,6 +1,6 @@
 <script setup>
 // vue
-import { reactive } from "@vue/reactivity"
+import { reactive } from "vue"
 
 // props
 const props = defineProps({

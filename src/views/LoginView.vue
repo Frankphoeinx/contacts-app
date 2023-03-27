@@ -1,8 +1,7 @@
 <script setup>
 // vue
-import { reactive } from "@vue/reactivity"
 import { useRouter } from "vue-router"
-import { watch } from "vue"
+import { watch, reactive } from "vue"
 
 // components
 import Input from "@/components/Input.vue"
